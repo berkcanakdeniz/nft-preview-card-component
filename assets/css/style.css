@@ -1,0 +1,142 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+/* general css */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  background-color: var(--main-bg);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+:root {
+  --softblue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  --main-bg: hsl(217, 54%, 11%);
+  --cardbg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* card */
+.card {
+  background-color: var(--cardbg);
+  width: 375px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 1px 34px 16px 15px rgb(0 0 0 / 30%);
+}
+
+.card .img {
+  position: relative;
+}
+
+.card .img .img-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(178, 100%, 50%, 60%);
+  top: 0;
+  border-radius: 10px;
+  opacity: 0;
+  transition: all 0.1s linear;
+}
+
+.card .img .img-hover:hover {
+  opacity: 1;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.card .img .img-hover img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card .img img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.card .hero {
+  color: var(--white);
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.card .desc {
+  padding-bottom: 25px;
+  color: var(--softblue);
+  line-height: 24px;
+  font-weight: 300;
+}
+
+.card .coin-info {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 25px;
+}
+
+.card .coin-info .coin {
+  color: var(--cyan);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.card .coin-info .coin img {
+  margin-right: 5px;
+}
+
+.card .coin-info .time {
+  color: var(--softblue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.card .coin-info .time img {
+  margin-right: 5px;
+}
+
+.card .author {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  color: var(--softblue);
+  font-size: 14px;
+}
+
+.card .author span {
+  margin-left: 5px;
+  color: var(--white);
+}
+
+.card .author img {
+  width: 30px;
+  border: 1px solid var(--white);
+  border-radius: 30px;
+  margin-right: 10px;
+}
+
+.card span:hover,
+.hero:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
