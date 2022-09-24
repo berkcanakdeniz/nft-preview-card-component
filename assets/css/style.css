@@ -140,3 +140,10 @@ body {
   color: var(--cyan);
   cursor: pointer;
 }
+
+/* responsive */
+@media (max-width: 400px) {
+  .card {
+    width: 300px;
+  }
+}
